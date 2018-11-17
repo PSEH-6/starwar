@@ -2,13 +2,13 @@ package com.example.starwar.model;
 
 public class PeopleModel extends CommonModel {
 
-  private PeopleModelDetails[] peopleModelDetails;
+  private PeopleModelDetails[] results;
 
-    public PeopleModelDetails[] getPeopleModelDetails() {
-        return peopleModelDetails;
+    public PeopleModelDetails[] getResults() {
+        return results;
     }
 
-    public void setPeopleModelDetails(PeopleModelDetails[] peopleModelDetails) {
-        this.peopleModelDetails = peopleModelDetails;
+    public void setResults(PeopleModelDetails[] results) {
+        this.results = results;
     }
 }

@@ -2,13 +2,13 @@ package com.example.starwar.model;
 
 public class SpeciesModel extends CommonModel {
 
-   private SpeciesModelDetails[] speciesModelDetails;
+   private SpeciesModelDetails[] results;
 
-    public SpeciesModelDetails[] getSpeciesModelDetails() {
-        return speciesModelDetails;
+    public SpeciesModelDetails[] getResults() {
+        return results;
     }
 
-    public void setSpeciesModelDetails(SpeciesModelDetails[] speciesModelDetails) {
-        this.speciesModelDetails = speciesModelDetails;
+    public void setResults(SpeciesModelDetails[] results) {
+        this.results = results;
     }
 }

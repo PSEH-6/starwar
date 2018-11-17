@@ -3,13 +3,13 @@ package com.example.starwar.model;
 public class FilmsModel extends CommonModel {
 
 
-   private FilmsModelDetails[] filmsModelDetails;
+   private FilmsModelDetails[] results;
 
-    public FilmsModelDetails[] getFilmsModelDetails() {
-        return filmsModelDetails;
+    public FilmsModelDetails[] getResults() {
+        return results;
     }
 
-    public void setFilmsModelDetails(FilmsModelDetails[] filmsModelDetails) {
-        this.filmsModelDetails = filmsModelDetails;
+    public void setResults(FilmsModelDetails[] results) {
+        this.results = results;
     }
 }

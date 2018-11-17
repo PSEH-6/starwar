@@ -18,7 +18,7 @@ public class OrchestrationService {
     private static  final String  STARSHIPS_TYPE="starships";
     private static  final String  VEHICLES_TYPE="vehicles";
 
-    public ResultModel getResultByTypeAndName(String name,String type){
+    public Object getResultByTypeAndName(String name,String type){
 
         if(type.equals(PEOPLE_TYPE)){
           return   refinePeoplesResult(starWarRestTemplate.getPeopleDetails(),name);
@@ -44,7 +44,7 @@ public class OrchestrationService {
 
     private ResultModel refineVehiclesResult(VehiclesModel vehiclesDetails,String name) {
 
-        for(VehiclesModelDetails vehiclesModelDetails:vehiclesDetails.getVehiclesModelDetails()){
+        for(VehiclesModelDetails vehiclesModelDetails:vehiclesDetails.getResults()){
             if(vehiclesModelDetails.getName().equals(name)){
                 return vehiclesModelDetails;
             }
@@ -53,7 +53,7 @@ public class OrchestrationService {
     }
 
     private ResultModel refineStarShipsResult(StarShipsModel starShipDetails,String name) {
-        for(StarShipsModelDetails starShipsModelDetails:starShipDetails.getStarShipsModelDetails()){
+        for(StarShipsModelDetails starShipsModelDetails:starShipDetails.getResults()){
             if(starShipsModelDetails.getName().equals(name)){
                 return starShipsModelDetails;
             }
@@ -62,7 +62,7 @@ public class OrchestrationService {
     }
 
     private ResultModel refineSpeciesResult(SpeciesModel speciesDetails,String name) {
-        for(SpeciesModelDetails speciesModelDetails:speciesDetails.getSpeciesModelDetails()){
+        for(SpeciesModelDetails speciesModelDetails:speciesDetails.getResults()){
             if(speciesModelDetails.getName().equals(name)){
                 return speciesModelDetails;
             }
@@ -72,7 +72,7 @@ public class OrchestrationService {
 
     private ResultModel refinePlanetsResult(PlanetModel planetDetails,String name) {
 
-        for(PlanetModelDetails planetModelDetails:planetDetails.getPlanetModelDetails()){
+        for(PlanetModelDetails planetModelDetails:planetDetails.getResults()){
             if(planetModelDetails.getName().equals(name)){
                 return planetModelDetails;
             }
@@ -81,7 +81,7 @@ public class OrchestrationService {
     }
 
     private ResultModel refineFilmsResult(FilmsModel filmsDetails,String name) {
-        for(FilmsModelDetails filmsModelDetails:filmsDetails.getFilmsModelDetails()){
+        for(FilmsModelDetails filmsModelDetails:filmsDetails.getResults()){
             if(filmsModelDetails.getTitle().equals(name)){
                 return filmsModelDetails;
             }
@@ -90,7 +90,7 @@ public class OrchestrationService {
     }
 
     private ResultModel refinePeoplesResult(PeopleModel peopleDetails,String name) {
-        for(PeopleModelDetails peopleModelDetails:peopleDetails.getPeopleModelDetails()){
+        for(PeopleModelDetails peopleModelDetails:peopleDetails.getResults()){
             if(peopleModelDetails.getName().equals(name)){
                 return peopleModelDetails;
             }

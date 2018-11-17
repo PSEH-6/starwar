@@ -1,13 +1,13 @@
 package com.example.starwar.model;
 
 public class VehiclesModel extends CommonModel  {
- private VehiclesModelDetails[] vehiclesModelDetails;
+ private VehiclesModelDetails[] results;
 
-    public VehiclesModelDetails[] getVehiclesModelDetails() {
-        return vehiclesModelDetails;
+    public VehiclesModelDetails[] getResults() {
+        return results;
     }
 
-    public void setVehiclesModelDetails(VehiclesModelDetails[] vehiclesModelDetails) {
-        this.vehiclesModelDetails = vehiclesModelDetails;
+    public void setResults(VehiclesModelDetails[] results) {
+        this.results = results;
     }
 }

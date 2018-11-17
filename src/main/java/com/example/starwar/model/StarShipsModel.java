@@ -2,13 +2,13 @@ package com.example.starwar.model;
 
 public class StarShipsModel extends CommonModel  {
 
-  private StarShipsModelDetails[] starShipsModelDetails;
+  private StarShipsModelDetails[] results;
 
-    public StarShipsModelDetails[] getStarShipsModelDetails() {
-        return starShipsModelDetails;
+    public StarShipsModelDetails[] getResults() {
+        return results;
     }
 
-    public void setStarShipsModelDetails(StarShipsModelDetails[] starShipsModelDetails) {
-        this.starShipsModelDetails = starShipsModelDetails;
+    public void setResults(StarShipsModelDetails[] results) {
+        this.results = results;
     }
 }

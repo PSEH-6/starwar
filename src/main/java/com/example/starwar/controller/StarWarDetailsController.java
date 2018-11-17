@@ -13,10 +13,9 @@ public class StarWarDetailsController {
     private OrchestrationService orchestrationService;
 
     @RequestMapping(value = "/getDetails" )
-    public void getStarWarDetails(@RequestParam(name="name", required=true) String name,
+    public Object getStarWarDetails(@RequestParam(name="name", required=true) String name,
                                   @RequestParam(name="type", required=true) String type){
-
-        orchestrationService.getResultByTypeAndName(name,type);
+        return   orchestrationService.getResultByTypeAndName(name,type);
 
     }
 

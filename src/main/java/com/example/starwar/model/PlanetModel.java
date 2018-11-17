@@ -2,13 +2,13 @@ package com.example.starwar.model;
 
 public class PlanetModel extends CommonModel  {
 
-   private PlanetModelDetails[] planetModelDetails;
+   private PlanetModelDetails[] results;
 
-    public PlanetModelDetails[] getPlanetModelDetails() {
-        return planetModelDetails;
+    public PlanetModelDetails[] getResults() {
+        return results;
     }
 
-    public void setPlanetModelDetails(PlanetModelDetails[] planetModelDetails) {
-        this.planetModelDetails = planetModelDetails;
+    public void setResults(PlanetModelDetails[] results) {
+        this.results = results;
     }
 }

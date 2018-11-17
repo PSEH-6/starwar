@@ -28,7 +28,7 @@ public class OrchestrationServiceTest {
 
         OrchestrationService orchestrationService= new OrchestrationService();
         ReflectionTestUtils.setField(orchestrationService, "starWarRestTemplate", starWarRestTemplate);
-        ResultModel resultModel=orchestrationService.getResultByTypeAndName("Luke Skywalker","people");
+        Object resultModel=orchestrationService.getResultByTypeAndName("Luke Skywalker","people");
         PeopleModelDetails peopleModel=(PeopleModelDetails)resultModel;
         assertTrue(peopleModel.getName().equalsIgnoreCase("Luke Skywalker"));
     }
@@ -40,7 +40,7 @@ public class OrchestrationServiceTest {
         PeopleModelDetails peopleModelDetails1= new PeopleModelDetails();
         peopleModelDetails1.setName("Luke Skywalker");
         peopleModelDetailsList[0]=peopleModelDetails1;
-        peopleModel.setPeopleModelDetails(peopleModelDetailsList);
+        peopleModel.setResults(peopleModelDetailsList);
         return peopleModel;
     }
 }
